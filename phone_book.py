@@ -93,6 +93,25 @@
 #         if search in contact_lst[index_var]:
 #             print(contact_str)
 
+# def copy_info():    
+#     with open('phonebook.txt', 'r', encoding='UTF-8') as file:
+#         contacts_list = file.read().rstrip().split('\n\n')
+#         print(file.read().rstrip())
+        
+#         for contact in enumerate(contacts_list, 1):
+#             print(*contact)
+
+#         select_number = int(input('Введите порядковый номер контакта для копирования в новый файл: '))       
+
+#         for index_num, contact in enumerate(contacts_list, 1):            
+#             if select_number == index_num:
+#                 select_info = contact
+
+#     with open('copied_info.txt', 'a', encoding='UTF-8') as file:        
+#         file.write(f'{select_info}\n\n') 
+
+#     print (f"Скопированная информация: {select_info}")
+
 # def interface():
 #     with open('phonebook.txt', 'a', encoding='UTF-8'):
 #         pass  
@@ -121,5 +140,7 @@
 #                 search_contact()
 #             case '4':
 #                 print('Good bye!')
+
+
     
 # interface()
