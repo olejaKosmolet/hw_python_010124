@@ -52,16 +52,20 @@ def copy_info():
     with open('phonebook.txt', 'r', encoding='UTF-8') as file:
         contacts_list = file.read().rstrip().split('\n\n')
         
-        for contact in enumerate(contacts_list, 1):
-            print(*contact)
+    for contact in enumerate(contacts_list, 1):
+        print(*contact)
 
-        select_number = int(input('Введите порядковый номер контакта для копирования в новый файл: '))       
+    select_number = int(input('Введите порядковый номер контакта для копирования в новый файл: '))   
 
-        for index_num, contact in enumerate(contacts_list, 1):            
-            if select_number == index_num:
-                select_info = contact
+    with open('copied_info.txt', 'a', encoding='UTF-8') as file_a:        
+        file_a.write(f'{contacts_list[select_number - 1]}\n\n') 
 
-    with open('copied_info.txt', 'a', encoding='UTF-8') as file:        
-        file.write(f'{select_info}\n\n') 
+    print (f"Скопированная информация: {contacts_list[select_number - 1]}")
 
-    print (f"Скопированная информация: {select_info}")
+    #  for index_num, contact in enumerate(contacts_list, 1):            
+    #     if select_number == index_num:
+    #         select_info = contact
+    #          break
+
+    # with open('copied_info.txt', 'a', encoding='UTF-8') as file_a:        
+    #     file_a.write(f'{select_info}\n\n')
