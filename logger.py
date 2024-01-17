@@ -51,7 +51,6 @@ def search_contact():
 def copy_info():    
     with open('phonebook.txt', 'r', encoding='UTF-8') as file:
         contacts_list = file.read().rstrip().split('\n\n')
-        print(file.read().rstrip())
         
         for contact in enumerate(contacts_list, 1):
             print(*contact)
